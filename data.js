@@ -1,4 +1,4 @@
-[
+export const data = [
   { id: 1, name: 'Cash In - COB' }, 
   { id: 2, name: 'Cash In - COBV' }, 
   { id: 3, name: 'Cash In - DUEDATE' }, 
