@@ -38,7 +38,7 @@
 
 ### e
 
-- MS de Streaming, mesma coisa do anterior, persistência de dados, regras de negócio, quem cuida disso é o MS.
+> MS de Streaming, mesma coisa do anterior, persistência de dados, regras de negócio, quem cuida disso é o MS.
 
 ### f
 

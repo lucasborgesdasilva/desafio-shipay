@@ -1,18 +1,8 @@
-import { useMemo, useState } from 'react';
-import { data } from '../data';
-import { Desafio3 } from './pages/desafio-tres';
-import { ProductsList } from './pages/desafio-um/components/products-list';
+import { useState } from 'react';
+import { ProductsList } from './pages/desafio-um/components/product-list';
 
 export const App = () => {
   const [search, setSearch] = useState("");
-
-  const SearchedProducts = useMemo(() => {
-    const filteredData = data.filter(product => {
-      return product.name.toLowerCase().includes(search.toLowerCase())
-    })
-
-    return !filteredData.length ? data : filteredData
-  }, [search]);
 
   return (
     <>
@@ -24,17 +14,26 @@ export const App = () => {
         gap: '8px',
         marginBottom: '8px'
       }}>
-        <label htmlFor="search">Pesquisar:</label>
         <input 
           name='search' 
           value={search} 
           onChange={(e) => setSearch(e.target.value)} 
+          style={{
+            padding: '8px',
+            color: 'black',
+            background: 'white',
+            border: 'none',
+            borderRadius: '9px',
+            outline: '1px solid #DDD',
+          }}
+          placeholder='Buscar...'
         />
       </div>
 
-      <ProductsList data={SearchedProducts} />
+      <ProductsList search={search} />
 
-      <Desafio3 />
+      {/* Apenas para visualização */}
+      {/* <Desafio3 /> */}
     </>
   )
 }
