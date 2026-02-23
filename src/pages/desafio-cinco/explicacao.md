@@ -10,7 +10,7 @@
 > eu separaria cada BFF para um Front-End, se fosse só o Web e o Mobile, e não tivesse tanta diferença entre eles
 > ai talvez 1 BFF já seria o suficiente.
 
-```ASCII
+```Text
   Web → BFF Web → Serviços / APIs
   Mobile → BFF Mobile → Serviços / APIs
   Smart → BFF Smart → Serviços / APIs
