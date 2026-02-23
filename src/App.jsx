@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { data } from '../data';
-import { ProductsList } from './components/products-list';
+import { Desafio3 } from './desafio-tres';
+import { ProductsList } from './desafio-um/components/products-list';
 
 export const App = () => {
   const [search, setSearch] = useState("");
@@ -15,7 +16,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>Filtro de Itens</h1>
+      <h1>Desafio 1 - Filtro de Itens</h1>
       <div style={{ 
         display: 'flex', 
         alignItems: 'center', 
@@ -32,6 +33,8 @@ export const App = () => {
       </div>
 
       <ProductsList data={SearchedProducts} />
+
+      <Desafio3 />
     </>
   )
 }
